@@ -8,21 +8,30 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/query.css" />
     <link rel="stylesheet" href="css/lightbox.min.css" />
-    <script src="js/lightbox-plus-jquery.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/script.js"></script>
   </head>
   <body>
     <header class="jq--home">
       <div class="nav-back"></div>
-      <nav>
+      <nav class="main-nav">
         <ul>
           <li><a href="#" class="jq--scroll-home">Home</a></li>
           <li><a href="#" class="jq--scroll-about">About</a></li>
+          <li><a href="#" class="jq--scroll-lottery">Lottery</a></li>
+          <li><a href="#" class="jq--scroll-photogallery">Photogallery</a></li>
+          <li><a href="#" class="jq--scroll-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="mobile-nav">
+        <ul class="menu">
+          <li>
+            <a href="#"><img src="img/menu.png" alt="Menu" /></a>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li><a href="#" class="jq--scroll-home">Home</a></li>
+          <li><a href="#" class="jq--scroll-about">About</a></li>
+          <li><a href="#" class="jq--scroll-lottery">Lottery</a></li>
           <li><a href="#" class="jq--scroll-photogallery">Photogallery</a></li>
           <li><a href="#" class="jq--scroll-contact">Contact</a></li>
         </ul>
@@ -45,8 +54,19 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
             aspernatur dicta molestiae culpa corporis saepe. Nisi non nesciunt
             excepturi! Corporis vitae porro aut sequi doloribus, eius voluptas
-            provident placeat ex! <br />
+            provident placeat ex!
           </p>
+        </div>
+      </section>
+
+      <section class="lottery row jq--lottery">
+        <div class="heading-main">
+          <h2>Lottery</h2>
+        </div>
+        <div class="lottery-content row">
+          <h2>Extra výplata</h2>
+          <button onclick="generateNumbers()">Generovať čísla</button>
+          <div class="numbers"></div>
         </div>
       </section>
 
@@ -109,7 +129,7 @@
         <form action="" class="contact-f">
           <input type="text" placeholder="Name and Surname" />
           <input type="email" placeholder="Email" />
-          <textarea name="" cols="50" rows="10" id=""></textarea>
+          <textarea name="" cols="50" rows="10" placeholder=""></textarea>
           <input type="submit" class="image-button" value="Send" />
         </form>
       </section>
@@ -126,5 +146,13 @@
       </div>
       <p>&copy 2024 artbyhyse</p>
     </footer>
+
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
