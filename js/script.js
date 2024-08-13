@@ -45,9 +45,9 @@
 })(jQuery);
 
 function generateNumbers() {
-  const numberCount = 6;
-  const maxNumber = 27;
-  const additionalNumberRange = 4;
+  const numberCount = 5;
+  const maxNumber = 50;
+  const additionalNumberRange = 12;
   let numbers = [];
 
   // hlavné čísla
@@ -61,10 +61,20 @@ function generateNumbers() {
     return a - b;
   });
 
-  // doplnkové číslo
-  let additionalNumber = Math.floor(Math.random() * additionalNumberRange) + 1;
+  // doplnkové čísla
+  let additionalNumbers = [];
+  while (additionalNumbers.length < 2) {
+    let randomAdditionalNumber =
+      Math.floor(Math.random() * additionalNumberRange) + 1;
+    if (!additionalNumbers.includes(randomAdditionalNumber)) {
+      additionalNumbers.push(randomAdditionalNumber);
+    }
+  }
+  additionalNumbers.sort(function (a, b) {
+    return a - b;
+  });
 
   document.querySelector(".numbers").innerText = `${numbers.join(
     ", "
-  )} | Doplnkové číslo: ${additionalNumber}`;
+  )} | Doplnkové čísla: ${additionalNumbers.join(", ")}`;
 }
