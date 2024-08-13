@@ -83,6 +83,10 @@ header {
   color: bisque;
 }
 
+.mobile-nav {
+  display: none;
+}
+
 /* header text, logo, button */
 .header-content {
   display: flex;
